@@ -9,6 +9,6 @@ var YOUR_CLIENT_ID = 'REPLACE_THIS_VALUE';
 var YOUR_REDIRECT_URI = 'REPLACE_THIS_VALUE';
 ```
 
-For more, see:
+For instructions on how to get these values, see:
 
 https://developers.google.com/identity/protocols/OAuth2UserAgent
