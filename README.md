@@ -12,3 +12,9 @@ var YOUR_REDIRECT_URI = 'REPLACE_THIS_VALUE';
 For instructions on how to get these values, see:
 
 https://developers.google.com/identity/protocols/OAuth2UserAgent
+
+---
+
+Related projects:
+- Python original: https://github.com/jonahar/google-reminders-cli
+- PHP port: https://github.com/Jinjinov/google-reminders-php
