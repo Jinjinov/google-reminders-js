@@ -3,8 +3,7 @@
   <head>
   </head>
   <body>
-    <button onclick="oauth2SignIn();">Sign In</button>
-    <button onclick="sendRequest();">Send Request</button>
+    <div id="reminders"></div>
 
     <script src="reminders.js"></script>
 
@@ -26,6 +25,8 @@
         localStorage.setItem('oauth2-params', JSON.stringify(params) );
       }
 
+      sendRequest();
+
       // If there's an access token, try an API request.
       // Otherwise, start OAuth 2.0 flow.
       function sendRequest() {
@@ -35,7 +36,13 @@
 
           list_reminders(10, params['access_token'], function (reminders) {
             if (reminders != null) {
-              console.log(reminders);
+              var innerHTML = '';
+              for(var reminder of reminders) {
+                innerHTML += '<p>';
+                innerHTML += reminder;
+                innerHTML += '</p>';
+              }
+              document.getElementById("reminders").innerHTML = innerHTML;
             }
             else if (reminders == null) {
               // Token invalid, so prompt for user permission.
